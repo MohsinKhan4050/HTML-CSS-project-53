@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --border-color: rgba(255, 255, 255, 0.5);
+    --border2: #ccc;
+    --color3: #fff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(images/login-hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.login-wrapper {
+    width: 350px;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.login-form .title {
+    color: var(--color3);
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .input-field {
+    border-bottom: 2px solid var(--border2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color3);
+}
+
+.input-field label {
+    position: absolute;
+    color: #fff;
+    left: 2px;
+    transition: 0.3s ease;
+    font-size: 14px;
+    pointer-events: none;
+
+}
+
+.input-field input:focus~label,
+.input-field input:not(:placeholder-shown)~label {
+    transform: translateY(-20px);
+}
+
+.password-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color3);
+    margin: 25px 0 35px 0;
+}
+
+.password-option label {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#reminder {
+    cursor: pointer;
+}
+
+.password-option a {
+    text-decoration: none;
+    color: var(--color3);
+
+}
+
+.password-option a:hover {
+    text-decoration: underline;
+}
+
+
+.login-form .login-button {
+    padding: 10px;
+    color: #000;
+    background: var(--color3);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.login-form .login-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.login-form .register {
+    color: var(--color3);
+    margin: 20px 0;
+}
+
+.register a {
+    text-decoration: none;
+    color: var(--color3)
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
